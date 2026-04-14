@@ -1,0 +1,84 @@
+main.py:
+
+from selenium import webdriver
+# Selenium package can handle different web browsers so you need a 'bridge' that bridges
+# the selenium code to the Chrome browser. This bridge is provided by the chrome driver
+
+
+# Keep Chrome browser open after program finishes
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_experimental_option("detach", True)
+
+driver = webdriver.Chrome(options=chrome_options)
+driver.get("https://amazon.co.uk")
+
+# driver.find_element() method:
+# is the same as using the find()/select_one() method in BeautifulSoup. Ofc you can
+# change "CLASS_NAME" to whatever attribute (well technically it's called a locator)
+# you're looking for.
+
+# NOTE: WITH CLASSES, THE CLASS_NAME IS ALWAYS THE WORD AT THE END OF THE CLASS WHERE
+# THERE'S NO SPACE BETWEEN 2 PIECES OF TEXT i.e.
+<button class="btn btn-lg btn-primary btn-block" type="submit"> Sign Up </button>
+# THEN 'CLASS_NAME="btn-block"'
+# NOT 'CLASS_NAME="btn btn-lg btn-primary btn-block"'
+
+OBVIOUSLY CHANGE THE URL TO AN ITEM, NOT JUST AMAZON HOMEPAGE
+print(f"The price is: {price_pounds.text}")
+# method '.text' is the same as getText() from bs4
+
+# To close it:
+driver.close() # Closes the tab
+driver.quit() # Closes the entire web browser
+
+# You can use methods like '.getattribute("{NAME_OF_ATTRIBUTE}")' to get the value of
+# attribute in question
+# e.g. print({NAME_OF_VARIABLE}.get_attribute("{NAME_OF_ATTRIBUTE}"))
+
+# Can use '.size' attribute to get a hold of a variable's size
+
+# Can use locator 'CSS_SELECTOR' to get a hold of an anchor tag's link e.g.
+# link = driver.find_element(By.CSS_SELECTOR, value = "{SPECIAL SYMBOL}attribute a
+# (for anchor tag)")
+# i.e. documentation_link = driver.find_element(By.CSS_SELECTOR,
+# value=".documentation-widget a")
+# print(documentation_link.text)
+
+# XPATH - If all else fails, this will always work
+# It's a way of locating a specific html element by a path structure
+# xpath = {GO INTO WEBPAGE -> INSPECT -> COPY -> COPY XPATH} (no need to save it as a
+# variable, it'll be a string where the {xpath} variable is in the lines below).
+# Only using a variable for a demonstration.
+# bug_link = driver.find_element(By.XPATH, value ='{xpath}')
+# print(bug_link.text)
+# HAVE TO USE SINGLE QUOTES (I think cos the xpath link uses double quotes)
+
+# method '.find_elements' works the same way as '.find_all' or '.select' from bs4
+
+
+interaction.py:
+
+# TO CLICK ON SOMETHING
+# IF YOU WANT TO CLICK ON SOMETHING, CALL THE '.click()' METHOD
+# i.e. {VARIABLE_THAT CALLS THE '.FIND_ELEMENT' METHOD}.click()
+
+# OR TO FIND ELEMENTS BY LINK TEXT (SAME AS CLICKING IT; BASICALLY AUTOMATICALLY CLICKS
+# A HYPERLINK):
+# Locate Hyperlink:
+# all_portals = driver.find_element(By.LINK_TEXT, value="Content Portals")
+# Click Hyperlink:
+# all_portals.click()
+
+# WHEN YOU WANNA TYPE SOMETHING INTO A SEARCH BAR, YOU LOCATE THE SEARCH BAR
+# (TYPICALLY THOUGH '.find.element(By.NAME, value="search"') AND USE THE METHOD
+# '.send_keys' TO TYPE WHATEVER YOU WANT IN THERE i.e.
+# search = driver.find_element(By.NAME, value="search")
+# search.send_keys("Python")
+
+# WHEN YOU WANNA INPUT A KEY THAT'S NOT A LETTER, NUMBER OR SYMBOL (e.g. the enter key),
+# YOU HAVE TO IMPORT: from selenium.webdriver.common.keys import Keys (contains a bunch
+# of constants)
+# search.send_keys(Keys.ENTER)
+
+# SO THE SEARCH THEN BECOMES
+# search.send_keys("Python", Keys.ENTER)
