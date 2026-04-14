@@ -1,0 +1,47 @@
+Font Properties: Changing The Appearance Of Text
+
+- FONT SIZE
+i.e.
+<h1>
+    font-size: 20px
+</h1>
+-> 1px (1 pixel) = 1/96th inch ~ 0.26mm
+-> 1pt (1 point) = 1/72nd inch ~ 0.35 mm - used in word documents
+-> 1em (1 "em" - pronounced like the letter 'm') = 100% of parent; full width of the letter 'm'
+BUT useful metric because it's relative size. 
+i.e. if
+<body> has a font size of 20px
+    <h1>Some random content</h1> has a font size of 1em,
+</body>
+then that means the size of h1=size of body; h1 = 20 px also. If it was 2em then it'd = 40 px etc
+-> 1rem = RECOMMENDED OVER USING 'em' because it's not embedded in other elements so easier to 
+configure. Similar to 1 em, 100% of root of html file (normally an html element that encloses
+everything inside). 
+
+- FONT WEIGHT
+i.e.
+<h1>
+    font-weight: normal
+</h1>
+-> keywords i.e. 'normal' or 'bold'
+-> relative to parent i.e. 'lighter' or 'bolder' (+/- 100)
+-> number between 100-900 (100 = lighter, 900 = bolder)
+
+- FONT FAMILY
+-> Basically the name of the font, although tends to be multiple in case some typefaces are 
+unavailable (e.g. Helvetica can't be found on windows). 
+-> Typefaces with mutiple words in their name need a quotation mark e.g. "Times New Roman"
+-> Backup type font needs to be the same type as the first font (e.g. serif, serif)
+i.e.
+<h1>
+    font-family: Helvetica, sans-serif
+</h1>
+
+Serif vs. Sans-Serif:
+Sans-Serif: If the edges of the letters are at right angles e.g. Helvetica
+Serif: Anything else such as the edges being rounded/ curved e.g. Times New Roman
+
+- TEXT Align
+h1 {
+    text-align: center/left/right/start/end
+}

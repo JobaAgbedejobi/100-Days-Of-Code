@@ -1,0 +1,11 @@
+The Image Element: Adding images to our website
+
+<img src="url" alt="Alternative URL name"/>
+
+# SRC
+# Attribute is called source or src and this renders the image. 
+# SRC tells the image element what is the source of the image, therefore value is the location (url) of the image. 
+# Image element is a void element so no closing tag needed
+
+# ALT
+# Alternative Text Description, useful for people with visual impairments so this desctiption of the image can be read out to them. 

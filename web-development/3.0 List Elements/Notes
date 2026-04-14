@@ -1,0 +1,15 @@
+- The List ELement
+
+Unordered list: List items as bullet points
+<ul>
+    <li>Milk</li>
+    <li>Eggs</li>
+    <li>Flour</li>
+</ul>
+
+Ordered list: Lists items as numbers (essentially ranked)
+<ol>
+    <li>Milk</li>
+    <li>Eggs</li>
+    <li>Flour</li>  
+</ol>

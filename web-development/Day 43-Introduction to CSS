@@ -1,0 +1,38 @@
+Into to CSS: what is CSS?
+CSS = Cascading Style Sheets
+    - A Cascade is like a waterfall; water at one level drops down into
+another and that into another one etc.
+    - A Style Sheet is a language that allows us to specify how things should look on our website. Similar to how html is a Markup Language (ht'ML'), c'SS' is a 'Style Sheet' Language. Many different types of style sheet languages, CSS is just one of them.
+
+3 Ways to Add CSS to a website:
+1. Inline: <tag style="css">
+    i.e. <html style="background:blue"></html> , where property = background, value = blue
+    Useful for adding a css style to a SINGLE ELEMENT on your html page
+
+2. Internal: <style>css</style>
+    i.e. <html>
+            <head>
+                <style>
+                    html { # This html is called a selector and the css goes in between curly braces
+                        background: red;
+                    }
+                </style>
+            </head>
+         </html>
+    Useful if you're applying it in only 1 html document i.e. SINGLE WEBPAGE
+
+3. External: <link href="style.css"/>
+    i.e. index.html file:
+    <html>
+        <head>
+            <link
+            rel="stylesheet" # rel = relationship; what is the role of this thing that we're linking to
+            href="./styles.css" # href = location; where in the directory is it located
+            />
+        </head>
+    </html>
+    styles.css file:
+    html {
+        background:green;
+    }
+    Useful for a SINGLE WEBSITE

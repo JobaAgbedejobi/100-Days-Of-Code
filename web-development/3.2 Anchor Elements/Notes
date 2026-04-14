@@ -1,0 +1,16 @@
+The Anchor Element: Understanding HTML Attributes
+
+HTML Attributes
+<tag attribute=value>Content</tag>
+i.e.
+<a href="http://www.google.com">This is a link</a>
+The anchor element has a special attribute called href (an attribute for a hyperlink).
+
+
+Can have as many attributes as you want, you just need to separate them with a space 
+(i.e. attribute=value anotherattribute=anothervalue etc) and make sure they're all in the 
+opening tag.
+
+There are specific attributes that you can use for certain elements i.e. href only works with 
+the anchor element. There are also global attributes that can be used with any element 
+i.e. <a draggable="true">This text is draggable</a>

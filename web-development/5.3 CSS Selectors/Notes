@@ -1,0 +1,131 @@
+CSS Selectors: Choosing where to apply CSS
+
+- ONE THING TO REMEMEBER: NO TAGS IN THE CSS FILE!!!
+
+- ELEMENT SELECTOR
+Choose the element Selector where you'd like your css rule to apply to. Applies to ALL ELEMENTS that 
+have that particular tag
+i.e.
+
+index.html
+<h2>Red</h2>
+<h2>Green</h2>
+<h2>Blue</h2>
+
+styles.css
+h2
+{
+    colour: red;
+}
+In this case, we're using an element selector (the name of the tag, in this case 'h2') and after the 
+curly braces, we can define whatever css rules that we want (in this case, text colour = red). 'Red', 
+'Green' and 'Blue' ALL turn red because they all have the 'h2' element selector.
+
+- CLASS SELECTOR
+Requires a special symbol (dot) then with no spaces, write the name of the class
+i.e.
+.red-heading{
+    color: red
+}
+
+A class is something we can add as an attribute to any html element.
+i.e.
+
+index.html
+<h2 class="red-text">Red</h2>
+<h2>Green</h2>
+<h2>Blue</h2>
+
+styles.css
+.red-text{
+    color: red;
+}
+Like saying let's group these particular elements into a class. Used for grouping elements in your html 
+file to apply the same css rule to all of them.
+
+You can tag different elements using the same class so that css style can apply to different tags. 
+Doesn't matter if it's h2, p, a, etc; if they have that class, the rule will apply to it. 
+
+- ID SELECTOR
+Special symbol (hashtag). 
+i.e.
+#main {
+    .color: red
+}
+
+Selects a particular id element and applies a certain rule.
+
+i.e.
+index.html
+<h2 id="main">Red</h2>
+<h2>Green</h2>
+<h2>Blue</h2>
+
+styles.css
+#main {
+    color:red;
+}
+
+ID vs. CLASS SELECTOR:
+Class Selector - can be applied to MANY elements
+Id Selector - should only be applied to ONE element in a single html file
+
+- ATTRIBUTE SELECTOR
+e.g. <h1 id=, class=, href=, src=, draggable=, alt=, etc>
+
+html element[attribute]{
+    css_property: value
+    }
+e.g.
+p[draggable]{ 
+    color:red
+}
+This particular case selects all p elements with the attribute 'draggable' and applies the css style to 
+them
+i.e.
+index.html
+<p draggable="true">Drag Me</p>
+<p>Don't drag me</p>
+<p>Don't drag me</p>
+
+styles.css
+p[draggable]{
+    color:red;
+}
+
+Result: Drag Me is in red, both Don't drag me's in default colour
+
+TAKING IT 1 STEP FURTHER...
+index.html
+<p draggable="true">Drag Me</p>
+<p draggable="false">Don't drag me</p>
+<p draggable="false">Don't drag me</p>
+
+styles.css
+p[draggable="false"]{
+    color: red;
+}
+
+Result: Both Don't drag me is in red, Drag me in default colour
+
+- UNIVERSAL SELECTOR
+Select all
+e.g.
+* {
+    color:red
+}
+
+i.e.
+index.html
+<h1 class="title">Hello</h1>
+<h2 id="heading">World</h2>
+<p draggable="true">
+    This is a website
+</p>
+
+styles.css
+* {
+    color: red;
+}
+
+Result: Everything is in red

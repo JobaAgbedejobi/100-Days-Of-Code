@@ -1,0 +1,14 @@
+The HTML Boilerplate: Understanding HTML structure
+Boilerplate allows us to understand the structure of the html files
+ - The HTML Boilerplate:
+<!DOCTYPE html> # Tells any browser reading our html file that it's been written in version 5
+<html lang="en"> # Actual html - root of the document
+    <head> # Important info about Website, that's not displayed to the user is placed here.
+        <meta charset="UTF-8"> # Ensures characters used in the website get displayed correctly
+        <title>My Website</title> # Gets displayed in the tab bar of your browser
+    </head> # Includes things that will help the website render in the browser correctly
+
+    <body> # Content of website goes here
+        <h1>Hello World!</h1>
+    </body>
+</html>
